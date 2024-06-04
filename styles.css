@@ -1,0 +1,108 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #0066ff, #66ccff);
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+h1 {
+    color: #ffd700;
+}
+
+.game-area {
+    margin: 20px 0;
+    position: relative;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.zeplin {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    animation: float 0.5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        bottom: -50px;
+    }
+    100% {
+        bottom: 350px;
+    }
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066ff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0052cc;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#current-x, #current-profit {
+    font-size: 24px;
+    font-weight: bold;
+}

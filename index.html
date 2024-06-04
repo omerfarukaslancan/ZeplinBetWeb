@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeplin Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zeplin Games</h1>
+        <div class="game-area">
+            <div class="zeplin">🪂</div>
+        </div>
+        <div class="controls">
+            <input type="number" id="bet-amount" placeholder="Yatırmak istediğiniz para">
+            <button id="bet-button">Oyna</button>
+            <button id="stop-button" disabled>Bitir</button>
+        </div>
+        <div class="info">
+            <p>Toplam Kar: <span id="total-profit">0</span></p>
+            <p>Toplam Para: <span id="total-money">1000</span></p>
+            <p>Şu anki X: <span id="current-x">1</span></p>
+            <p>Şu anki Kar: <span id="current-profit">0</span></p>
+        </div>
+    </div>
+    <audio id="background-music" src="background-music.mp3" loop></audio>
+    <audio id="explosion-sound" src="explosion-sound.mp3"></audio>
+    <audio id="win-sound" src="win-sound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
